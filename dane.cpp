@@ -3,7 +3,7 @@
 #include<QTime>
 #include<QTextCursor>
 #include<ctime>
-
+//Siema 
 
 extern Klawiatura *w;
 Dane::Dane(QGraphicsItem *parent):QGraphicsTextItem(parent)
