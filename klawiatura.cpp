@@ -1,5 +1,6 @@
 #include "klawiatura.h"
 #include<QBrush>
+#include<QTextStream>
 
 Klawiatura::Klawiatura(QWidget *parent)
 {
@@ -13,6 +14,7 @@ Klawiatura::Klawiatura(QWidget *parent)
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(rec.width(),rec.height());
     setScene(scene);
+
 
 
 }

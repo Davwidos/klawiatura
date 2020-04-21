@@ -3,6 +3,8 @@
 #include<QTime>
 #include<QTextCursor>
 #include<ctime>
+#include<QFile>
+#include<QTextStream>
 
 
 extern Klawiatura *w;
@@ -12,6 +14,16 @@ Dane::Dane(QGraphicsItem *parent):QGraphicsTextItem(parent)
     setDefaultTextColor(Qt::green);
     setFont(QFont("comic sans",20));
     setTextWidth(w->width());
+    QFile data;
+    data.setFileName(":/text/do_przepisania.txt");
+    data.open(QIODevice::ReadOnly | QIODevice::Text);
+    QTextStream f(&data);
+    t="Przepisz podany tekst:\n";
+    t+=f.readAll();
+    t+="\nPrzepisany tekst:\n";
+    f.seek(0);
+    setPlainText(t);
+
 
 }
 

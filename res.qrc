@@ -4,4 +4,7 @@
         <file>button.png</file>
         <file>button1.png</file>
     </qresource>
+    <qresource prefix="/text">
+        <file>do_przepisania.txt</file>
+    </qresource>
 </RCC>
