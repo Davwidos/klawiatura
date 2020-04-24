@@ -1,7 +1,6 @@
 #include "przycisk.h"
 #include<QGraphicsTextItem>
 #include<QBrush>
-
 //tworzenie nowego przycisku
 Przycisk::Przycisk(QString nazwa,QGraphicsItem *parent):QObject(),QGraphicsPixmapItem(parent)
 {
@@ -10,6 +9,7 @@ Przycisk::Przycisk(QString nazwa,QGraphicsItem *parent):QObject(),QGraphicsPixma
     int xPos = boundingRect().width()/2-text->boundingRect().width()/2;
     int yPos = boundingRect().height()/2 - text->boundingRect().height()/2;
     text->setPos(xPos,yPos);
+
     setAcceptHoverEvents(true);
 }
 
